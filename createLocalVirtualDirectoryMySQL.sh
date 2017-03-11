@@ -14,9 +14,9 @@ then
 	exit 1
 fi
 
-mkdir -p $1/web
 mkdir -p $1/private
 mkdir -p $1/tmp
+mkdir -p $1/web
 
 mysql -u root -p -e "CREATE DATABASE $1 CHARACTER SET utf8 COLLATE utf8_general_ci;GRANT ALL PRIVILEGES ON $1.* TO $1@'localhost' IDENTIFIED BY '$1';"
 
